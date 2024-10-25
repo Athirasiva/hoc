@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from './Components/Hello';
+import WithCounter from './Components/WithCounter';
 
+// *****Passing Hello  component as props ********
+
+const CounterWithHoc1 = WithCounter(Hello)
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Counter App</h1>
+     <CounterWithHoc1/>
     </div>
   );
 }
